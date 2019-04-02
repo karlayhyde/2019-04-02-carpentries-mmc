@@ -10,3 +10,5 @@ file_url <- "https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh
 
 download.file(url = file_url, destfile = here("data/gapminder/raw/gapminder_data"))
 
+view(gap_wide)
+view(gapminder)
