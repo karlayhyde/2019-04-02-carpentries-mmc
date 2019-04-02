@@ -20,7 +20,7 @@ output:
 
 ## Author
 
-<Karla Y. Hyde> (<kyhyde@mmc.org>)
+Karla Y. Hyde (kyhyde@mmc.org)
 
 ## Contents
 
