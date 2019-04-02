@@ -28,7 +28,6 @@ LifeExp_btcountry  <- gapminder %>%
 head(LifeExp_btcountry)
 
 
-ggplot code:
   ggplot(data = gapminder, aes(x = year, y = lifeExp, color = continent)) +
   geom_line() + facet_wrap( ~ country)
 
@@ -36,4 +35,6 @@ ggplot code:
    ggplot(data = gapminder, aes(x = year, y = lifeExp, color = continent)) +
                              geom_line() + facet_wrap( ~ country)
 
+   
+   
 
