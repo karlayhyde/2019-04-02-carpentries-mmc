@@ -1,0 +1,45 @@
+---
+title: "Analysis of Life Expectancy"
+author: "Karla Hyde"
+date: "4/2/2019"
+output: 
+  html_document:
+      code_folding: hide
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(tidyverse)
+library(pander)
+library(stargazer)
+library(beepr)
+```
+## Analysis of Life Expectancy by Continent
+
+We hypothesize that life expecatancy is a function of time and location.  This analysis attempts to check that relationship.
+
+**Note: This is a preliminary analysis and not meant for distribution to the public.**
+
+[Link to the github repository](https://github.com/karlayhyde/2019-04-02-carpentries-mmc)
+
+## R Markdown
+ctrl+shift+k knits
+
+```{r echo = FALSE, message = FALSE}
+d <- readr::read_csv(here("data/gapminder/raw/gapminder_data.csv"))
+
+#ggplot(data = d, aes(x = year, y = lifeExp)) + geom_point()
+
+ggplot(data = filter(d, continent == "Asia")) + geom_line(aes(x = year, y = lifeExp, group = country, color = country)) 
+```
+
+```{r echo = TRUE, message = TRUE}
+d <- readr::read_csv(here("data/gapminder/raw/gapminder_data.csv"))
+
+ggplot(data = d, aes(x = year, y = lifeExp)) + geom_point()
+
+```
+
+

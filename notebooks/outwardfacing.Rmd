@@ -1,0 +1,61 @@
+---
+title: "Analysis of Life Expectancy Outward"
+author: "Karla Hyde"
+date: "4/2/2019"
+output: 
+  html_document:
+      code_folding: hide
+bibliography: "../outputs/library.bib"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(tidyverse)
+library(pander)
+library(stargazer)
+library(beepr)
+```
+
+```{r echo = FALSE, message = FALSE}
+d <- readr::read_csv(here("data/gapminder/raw/gapminder_data.csv"))
+```
+
+## Introduction
+The analysis of life expectancy by Hans Rosling shows that things are getting better [@Rosling2011].
+
+## Data
+Data consists of `r length(unique(d$country))` unique countries tracked from `r range(d$year)[1]` to `r range(d$year)[2]`.
+
+Table 1 presents a summary of the variables.
+
+```{r}
+d2 <- d %>%
+      group_by(country) %>%
+      summarize(pop     = mean(pop),
+                lifeExp = mean(lifeExp)
+                )
+
+pander(summary(d2))
+```
+
+# Linear Model
+Results of our model can be seen in Table 2.
+```{r}
+m <- lm(lifeExp ~ continent + year + pop, data = d)
+summary(m)
+```
+
+```{r, results= "asis"}
+stargazer(m, type = "html")
+
+```
+
+#References
+
+
+
+
+
+
+
