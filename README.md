@@ -17,14 +17,15 @@ Status](https://coveralls.io/repos/github/%3Cusername%3E/%3CPROJECT%20NAME%3E/ba
 
 ## Author
 
-<your name> (<user email>)
+\<Karla Y. Hyde\> (<kyhyde@mmc.org>)
 
 ## Contents
 
-This is the github repository for our paper titled <PAPER TITLE>. Please
-make use of our work, and if you do, please cite as follows:
+This is the github repository for our paper titled
+<My First Attempt at R Studio Cloud>. Please make use of our work, and
+if you do, please cite as follows:
 
-> <LAST NAME>, <FIRST NAME>. “<PAPER TITLE>”. *<JOURNAL TITLE>*
+> Hyde, Karla. “<My First Attempt at R Studio Cloud>”. *<JOURNAL TITLE>*
 > <VOLUME>, no. <NUMBER> (<YEAR>): <PAGES>. doi:
 > <https://dx.doi.org/xxxxxx>.
 
